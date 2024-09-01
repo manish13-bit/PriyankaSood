@@ -4,12 +4,12 @@ body {
     margin: 0;
     padding: 0;
     background-color: #000000;
-    color: #000000;
+    color: #fcfafa;
 }
 
 header {
     background-color: #333;
-    color: white;
+    color: rgb(8, 0, 0);
     padding: 10px 0;
     text-align: center;
 }
