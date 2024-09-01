@@ -56,7 +56,8 @@ main {
 
 .featured-images img {
     max-width: 100%; /* Ensures the image fits within the screen */
-    height: auto;
+    height: 80vh;
+    object-fit: cover;
     border-radius: 10px;
     margin: 10px;
 }
