@@ -43,7 +43,7 @@ main {
 }
 
 /* Gallery Images */
-.gallery img, .featured-images img {
+.gallery img {
     margin: 10px;
     width: 300px;
     height: 200px;
@@ -52,6 +52,13 @@ main {
     transition: transform 0.3s ease, border-color 0.3s ease;
     cursor: pointer;
     border: 2px solid #ccc; /* Optional: border color */
+}
+
+.featured-images img {
+    max-width: 100%; /* Ensures the image fits within the screen */
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
 }
 
 /* Zoom Effect */
