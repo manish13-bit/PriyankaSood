@@ -1,21 +1,32 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8; /* Light background for royal theme */
+    background-color: #999;
     color: #333;
 }
 
 header {
-    background-color: #000; /* Black background for header */
-    color: gold; /* Golden text */
-    padding: 15px 0;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
     text-align: center;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2em;
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
 }
 
 main {
@@ -23,38 +34,40 @@ main {
     text-align: center;
 }
 
-.logo-container img {
-    max-width: 100%;
-    height: auto;
-    background-color: #000; /* Black background for logo */
-    padding: 20px;
-}
-
-.gallery {
+/* Gallery and Featured Images */
+.gallery, .featured-images {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
-.gallery img {
+/* Gallery Images */
+.gallery img, .featured-images img {
     margin: 10px;
     width: 300px;
     height: 200px;
     border-radius: 10px;
-    transition: transform 0.3s ease; /* Smooth zoom transition */
+    object-fit: cover;
+    transition: transform 0.3s ease, border-color 0.3s ease;
     cursor: pointer;
+    border: 2px solid #ccc; /* Optional: border color */
 }
 
+/* Zoom Effect */
+.gallery img.zoomed, .featured-images img.zoomed {
+    transform: scale(2);
+    z-index: 10;
+    border: 2px solid #666; /* Optional: border color on zoom */
+}
+
+/* Footer Styles */
 footer {
-    background-color: #000; /* Black background for footer */
-    color: gold; /* Golden text */
+    background-color: #333;
+    color: white;
     text-align: center;
     padding: 10px 0;
     position: fixed;
     width: 100%;
     bottom: 0;
-}
-
-.zoomed {
-    transform: scale(1.5); /* Adjust zoom level */
 }
